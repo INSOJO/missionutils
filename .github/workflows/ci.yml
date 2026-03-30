@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  test-and-build:
+  test-build-audit:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pytest build
+          pip install pytest build pip-audit
           pip install -e .
 
       - name: Run tests
@@ -30,3 +30,6 @@ jobs:
 
       - name: Build package
         run: python -m build
+
+      - name: Audit dependencies
+        run: pip-audit
