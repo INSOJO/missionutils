@@ -73,7 +73,7 @@ print(validate_lat_lon(18.4655, -66.1057))   # True
 print(validate_battery_pct(87))              # True
 print(normalize_mission_id("  Mission Alpha "))  # mission-alpha
 ```
-## Ci and security
+## CI and security
 This repository uses GitHub Actions to:
 - run tests automatically on pushes and pull requests
 - build the package
